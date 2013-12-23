@@ -49,6 +49,8 @@ fi
 
 if false; then
 # set core_pattern with absolute path
+mkdir /tmp/coredump
+chmod u+x /tmp/coredump
 echo "/tmp/coredump/core.%e.%p.%t" >> /proc/sys/kernel/core_pattern
 fi
 
