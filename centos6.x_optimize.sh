@@ -49,7 +49,7 @@ fi
 
 if false; then
 # set core_pattern with absolute path
-echo `/tmp/coredump/core.%e.%p.%t` >> /proc/sys/kernel/core_pattern
+echo "/tmp/coredump/core.%e.%p.%t" >> /proc/sys/kernel/core_pattern
 fi
 
 if false; then
