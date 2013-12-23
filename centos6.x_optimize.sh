@@ -110,4 +110,4 @@ echo "sysctl...done"
 fi
 
 echo "Optimize is done."
-echo "It's recommand to restart this server!"
+echo "It's recommand to restart OS!"
