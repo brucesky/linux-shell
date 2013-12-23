@@ -38,13 +38,18 @@ echo "set max user processes...done"
 fi
 
 if false; then
-# set the file limit
+# set file limit
 echo "ulimit -SHn 102400" >> /etc/rc.local
 cat >> /etc/security/limits.conf << EOF
 *                soft    nofile          65535
 *                hard    nofile          65535
 EOF
 echo "set file limit...done"
+fi
+
+if false; then
+# set core_pattern with absolute path
+echo `/tmp/coredump/core.%e.%p.%t` >> /proc/sys/kernel/core_pattern
 fi
 
 if false; then
