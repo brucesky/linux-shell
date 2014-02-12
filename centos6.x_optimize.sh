@@ -33,7 +33,7 @@ fi
 
 if false; then
 # set max user processes
-sed -i 's/1024.*/102400/' /etc/security/limits.d/90-nproc.conf
+sed -i 's/1024.*/10240/' /etc/security/limits.d/90-nproc.conf
 echo "set max user processes...done"
 fi
 
@@ -50,7 +50,6 @@ fi
 if false; then
 # set core_pattern with absolute path
 mkdir /tmp/coredump
-chmod u+x /tmp/coredump
 echo "/tmp/coredump/core.%e.%p.%t" >> /proc/sys/kernel/core_pattern
 fi
 
